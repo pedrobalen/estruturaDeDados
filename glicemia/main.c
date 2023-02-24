@@ -2,6 +2,23 @@
 #include <stdlib.h>
 #include "util.h"
 
+
+void manu(){
+  char opcao;
+  int glicemia;
+  char data[10];
+  char hora[5];
+  do{
+    printf("1 - cadastrar\n");
+    printf("2 - cadastrar\n");
+    printf("3 - cadastrar\n");
+    printf("Opcao: \n");
+    //terminar
+    
+  } while(1);
+
+
+
 int main(void) {
   FILE *procurador;
   char nomeArquivo[200];
@@ -45,5 +62,4 @@ int main(void) {
   //exibirResultado
   return 0;
 }
-
 
