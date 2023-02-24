@@ -2,8 +2,35 @@
 #include <stdlib.h>
 #include "util.h"
 
+void cadastrar(){
+  FILE *procurador;
+  int glicemia;
+  char data[10];
+  char hora[5];
+  
+  procurador = open("dados.dat","");
+  if(!procurador){
+    printf("O acesso a base de dados esta com problema\n");
+    return;
+  }
+  printf("Valor glicemia: ");
+  scanf("%d", &glicemia);
+  printf("Data: ");
+  scanf("%s", data);
+  fflush(stdin);
+  printf("Hora: ");
+  scanf("%s", hora);
 
-void manu(){
+  //persistir
+  fprintf(procurador,"%d@%s@%s\n", glicemia,data,hora);
+  fclose(procurador);
+}
+
+
+
+
+
+void menu(){
   char opcao;
   int glicemia;
   char data[10];
